@@ -10,7 +10,6 @@ module.exports = {
     compress: true,
     liveReload: false,
     open: true,
-    // hot: true,
     proxy: {
         // "/": {
         //     target: "",

@@ -6,8 +6,8 @@
 const path = require("path")
 const WebpackBar = require("webpackbar")
 const Webpack = require("webpack")
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const glob = require('glob')
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const glob = require("glob")
 const entrys = require("./entry.js").entrys
 
 let plugins = [
@@ -15,7 +15,7 @@ let plugins = [
     new Webpack.HotModuleReplacementPlugin({})
 ]
 
-new glob.Glob('!(_)*', {
+new glob.Glob("!(_)*", {
     cwd: entrys,
     sync: true
 }).found.forEach(page => {

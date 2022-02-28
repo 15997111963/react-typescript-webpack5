@@ -14,7 +14,7 @@ module.exports = (_, process) => ({
         extensions: [".tsx", ".ts", ".jsx", ".js", ".json", ".less"],
         alias: {
             "@": path.resolve(__dirname, "../src"),
-            '@/assets': path.resolve(__dirname, "../src/assets")
+            "@/assets": path.resolve(__dirname, "../src/assets")
         }
     },
     devServer: process.mode === "development" ? require("./devserver.js") : {}
