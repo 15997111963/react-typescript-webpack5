@@ -1,0 +1,12 @@
+dist
+development
+node_modules
+production
+git.md
+package-lock.json
+yarn.lock
+debug.log
+types
+yarn-error.log
+.idea
+.DS_Store
