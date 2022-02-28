@@ -8,7 +8,7 @@ import "./style.less"
 
 const Login: React.FC = () => {
     return (
-        <div className="login">登录</div>
+        <div className="login">Login</div>
     )
 }
 

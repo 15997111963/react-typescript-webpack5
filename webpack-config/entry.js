@@ -1,10 +1,10 @@
-const glob = require('glob')
-const path = require('path')
+const glob = require("glob")
+const path = require("path")
 
 const entry = {}
-const entrys = path.resolve(__dirname, '../src/entrys')
+const entrys = path.resolve(__dirname, "../src/entrys")
 
-new glob.Glob('!(_)*', {
+new glob.Glob("!(_)*", {
     cwd: entrys,
     sync: true
 }).found.forEach(page => {

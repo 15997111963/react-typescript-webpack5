@@ -1,7 +1,6 @@
 /**
- * @author 柯伟康
+ * @author K
  * @filename useLocalState
- * @date 2021-09-01
  * @description 自定义localState
  */
 import React from "react"

@@ -1,5 +1,5 @@
 /**
- * @author Mr Ke
+ * @author K
  * @filename useSetState
  */
 
@@ -12,7 +12,7 @@ export default function useSetState<S>(initialState: S): [
     const [state, setState] = React.useState<S>(initialState)
 
     const selfSetState: <K extends keyof S>(_state: Pick<S, K> | ((prev: S) => Pick<S, K>)) => void = (_state) => {
-        typeof _state === 'function' ? setState((prev: S): S => ({ ...prev, ..._state(prev) })) : setState((prev: S): S => ({ ...prev, ..._state }))
+        typeof _state === "function" ? setState((prev: S): S => ({ ...prev, ..._state(prev) })) : setState((prev: S): S => ({ ...prev, ..._state }))
     }
 
     return [state, selfSetState]
