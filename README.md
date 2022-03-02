@@ -4,7 +4,32 @@
 
 ## 项目结构
 
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/338bc09604c84082a3cc1cc4e4404e3f~tplv-k3u1fbpfcp-watermark.image?)
+```
+└─ src
+│  ├─ assets
+│  ├─ components
+│  ├─ entrys
+│  ├─ hooks
+│  ├─ pages
+│  ├─ router
+│  ├─ store
+│  ├─ styles
+│  ├─ utils
+│  └─ App.tsx
+└─ webpack-config
+│  ├─ devserver.js
+│  ├─ entry.js
+│  ├─ module.js
+│  ├─ plugins.js
+│  └─ webpack.config.js
+├─ .babelrc
+├─ .gitignore
+├─ .prettierrc.json
+├─ global.d.ts
+├─ package.json
+├─ README.md
+└─ tsconfig.json
+```
 
 ## 简介
 
