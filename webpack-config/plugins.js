@@ -14,7 +14,8 @@ let plugins = [
     new WebpackBar(),
     new Webpack.HotModuleReplacementPlugin({}),
     new Webpack.ProvidePlugin({
-		log: path.resolve(__dirname, "../src/utils/chalk.ts")
+		log: [path.resolve(__dirname, "../src/utils/chalk.ts"), "log"],
+		err: [path.resolve(__dirname, "../src/utils/chalk.ts"), "err"]
 	})
 ]
 

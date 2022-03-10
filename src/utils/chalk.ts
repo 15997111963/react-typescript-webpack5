@@ -7,8 +7,15 @@ const maps = {
     e: chalk.bold.magenta
 }
 
-function log (message: any, types: keyof typeof maps = "i") {
-    console.log(maps[types](message))
+function log(..._: any[]): void {
+    return maps.i.call(void 0, ...arguments)
 }
 
-module.exports = log
+function err(..._: any[]): void {
+    return maps.e.call(void 0, ...arguments)
+}
+
+module.exports = {
+    log,
+    err
+}
