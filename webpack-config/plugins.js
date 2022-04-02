@@ -11,12 +11,15 @@ const glob = require("glob")
 const entrys = require("./entry.js").entrys
 
 let plugins = [
-    new WebpackBar(),
+    new WebpackBar({
+        name: "😈 Product name",
+        color: "#1890ff"
+    }),
     new Webpack.HotModuleReplacementPlugin({}),
     new Webpack.ProvidePlugin({
-		log: [path.resolve(__dirname, "../src/utils/chalk.ts"), "log"],
-		err: [path.resolve(__dirname, "../src/utils/chalk.ts"), "err"]
-	})
+        log: [path.resolve(__dirname, "../src/utils/chalk.ts"), "log"],
+        err: [path.resolve(__dirname, "../src/utils/chalk.ts"), "err"]
+    })
 ]
 
 new glob.Glob("!(_)*", {
@@ -35,7 +38,6 @@ new glob.Glob("!(_)*", {
         template: path.resolve(entrys, `${page}/index.html`),
         hash: true,
         chunks: entry,
-        // 如果需要页面title上的图标 需加入此行 并在index.html同级放入favicon.ico图标 不然会报错
         // favicon: path.resolve(entrys, `${page}/favicon.ico`)
     }))
 })

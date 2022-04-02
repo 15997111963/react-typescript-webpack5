@@ -1,7 +1,7 @@
 const path = require("path")
 
 module.exports = (_, process) => ({
-    devtool: process.mode === "development" ? "source-map" : "cheap-module-source-map",
+    devtool: process.mode === "development" ? "eval" : "source-map",
     entry: require("./entry").entry,
     output: {
         filename: "./js/[name].[hash].js",
@@ -17,5 +17,6 @@ module.exports = (_, process) => ({
             "@/assets": path.resolve(__dirname, "../src/assets")
         }
     },
-    devServer: process.mode === "development" ? require("./devserver.js") : {}
+    devServer: process.mode === "development" ? require("./devserver.js") : {},
+    stats: "none"
 })
